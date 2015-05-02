@@ -48,6 +48,7 @@ Bundle "Lokaltog/vim-easymotion"
 Bundle "tomtom/tcomment_vim.git"
 Bundle "tpope/vim-bundler"
 Bundle "vim-scripts/matchit.zip.git"
+Bundle "junegunn/vim-easy-align"
 
 " Tabbable snippets
 Bundle "garbas/vim-snipmate.git"
