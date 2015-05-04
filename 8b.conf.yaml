@@ -45,7 +45,7 @@
         path: zsh
     ~/.zshrc:
         force: true
-        path: zsh/zshrc
+        path: 8b/zsh/zshrc
     ~/.zshenv:
         force: true
         path: 8b/zsh/zshenv
