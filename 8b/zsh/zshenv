@@ -5,7 +5,8 @@
   export BIN="/usr/local/bin"
   export SBIN="/usr/local/sbin"
   export NPM="/usr/local/bin/npm"
-  export PATH=$NPM:$MYBIN:$BIN:$SBIN:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+  export SMARTGIT="/usr/share/smartgit/bin"
+  export PATH=$NPM:$MYBIN:$BIN:$SBIN:$SMARTGIT:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 # ---------------------------------------
 # Environmental Variables
