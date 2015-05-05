@@ -100,7 +100,7 @@ if defined? AwesomePrint
 
 
   ## Evaluated result display inline
-  # Pry.config.print = lambda { |output, value| output.print "\e[1A\e[18C # => "; output.puts value.inspect }
+  Pry.config.print = lambda { |output, value| output.print "\e[1A\e[18C # => "; output.puts value.inspect }
 
   ## if in bundler, break out, so awesome print doesn't have to be in Gemfile
   if defined? Bundler

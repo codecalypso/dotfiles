@@ -14,6 +14,8 @@
 [alias]
   # add
   a = add                           # add
+  aA = add -A                       # add -A
+  ap = add -p                       # add -p (interactive adding)
   chunkyadd = add --patch           # stage commits chunk by chunk
 
   # via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
