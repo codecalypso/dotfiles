@@ -7,3 +7,6 @@ tmux/plugins
 
 # Ignore my SSH keys ;)
 ssh/
+
+# Dotbot
+dotbot/
