@@ -11,5 +11,11 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
+
 command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
-nmap ,w :StripTrailingWhitespaces<CR>
+
+nmap ,sw :StripTrailingWhitespaces<CR>
+
+autocmd BufWritePre *.rb,*.js,*.coffee :call <SID>StripTrailingSpace()
+autocmd BufWritePre *.scss,*.haml,*.slim,*.html,*.builder :call <SID>StripTrailingSpace()
+autocmd BufWritePre *.txt,*.md,*.markdown :call <SID>StripTrailingSpace()
