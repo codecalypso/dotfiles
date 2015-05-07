@@ -15,7 +15,7 @@ nnoremap ,ow "_diwhp
 "make Y consistent with C and D
 nnoremap Y y$
 function! YRRunAfterMaps()
-  nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
+  nnoremap Y :<C-U>YRYankCount 'y$'<CR>
 endfunction
 
 " ========================================
@@ -25,7 +25,6 @@ endfunction
 " out our hands. For example, typing underscores and
 " dashes are very common, and in position that require
 " a lot of hand movement. Vim to the rescue
-"
 
 " ,# Surround a word with #{ruby interpolation}
 map ,# ysiw#
@@ -61,7 +60,7 @@ vmap ,{ c{<C-R>"}<ESC>
 map ,` ysiw`
 
 " gary bernhardt's hashrocket
-imap <c-l> <space>=><space>
+imap <C-l> <space>=><space>
 
 "Go to last edit location with ,.
 nnoremap ,. '.
@@ -134,7 +133,10 @@ nmap ;w :w<CR>
 
 " formatted paste
 nmap <leader>p pV`]=
-nmap <leadervP PV`]=
+nmap <leader>P PV`]=
+
+" paste shortcut
+nnoremap <silent> <F5> :set paste!<CR>
 
 " Remap VIM 0 to first non-blank character
 map 0 ^
