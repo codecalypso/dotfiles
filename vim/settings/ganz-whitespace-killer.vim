@@ -16,6 +16,6 @@ command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
 
 nmap ,sw :StripTrailingWhitespaces<CR>
 
-autocmd BufWritePre *.rb,*.js,*.coffee :call <SID>StripTrailingSpace()
-autocmd BufWritePre *.scss,*.haml,*.slim,*.html,*.builder :call <SID>StripTrailingSpace()
-autocmd BufWritePre *.txt,*.md,*.markdown :call <SID>StripTrailingSpace()
+autocmd BufWritePre *.rb,*.js,*.coffee :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.scss,*.haml,*.slim,*.html,*.builder :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.txt,*.md,*.markdown :call <SID>StripTrailingWhitespaces()
