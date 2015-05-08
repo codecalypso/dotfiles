@@ -190,6 +190,22 @@ rescue LoanError => err
 end
 
 # ==============================
+#   Custom Commands
+# ==============================
+Pry::Commands.create_command "format_html" do
+  description "Format the html output for [ARGS]"
+  command_options requires_gem: ['nokigiri']
+
+  def process
+    @object_to_interrogate = args.empty? ? target_self : target.eval(args.join(" "))
+    cleaned_html = Nokogiri::XML(@object_to_interrogate,&:noblanks)
+
+    colorized_text = Pry.config.color ? CodeRay.scan(cleaned_html, :html).term : cleaned_html
+    output.puts colorized_text
+  end
+end
+
+# ==============================
 #   Customized hotkeys for Pry
 # ==============================
 # Ever get lost in pryland? try w!
