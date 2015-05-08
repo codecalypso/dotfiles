@@ -65,62 +65,58 @@ end
 # A mini view framework for console/irb that's easy to use, even while under its influence. Console goodies include a no-wrap table, auto-pager, tree and menu.
 # Visit http://tagaholic.me/hirb/ to know more.
 
-# if defined? Hirb
-#   # Slightly dirty hack to fully support in-session Hirb.disable/enable toggling
-#   Hirb::View.instance_eval do
-#     def enable_output_method
-#       @output_method = true
-#       @old_print = Pry.config.print
-#       Pry.config.print = proc do |output, value|
-#         Hirb::View.view_or_page_output(value) || @old_print.call(output, value)
-#       end
-#     end
-#
-#     def disable_output_method
-#       Pry.config.print = @old_print
-#       @output_method = nil
-#     end
-#   end
-#
-#   Hirb.enable
-# end
+if defined? Hirb
+  # Slightly dirty hack to fully support in-session Hirb.disable/enable toggling
+  Hirb::View.instance_eval do
+    def enable_output_method
+      @output_method = true
+      @old_print = Pry.config.print
+      Pry.config.print = proc do |output, value|
+        Hirb::View.view_or_page_output(value) || @old_print.call(output, value)
+      end
+    end
+
+    def disable_output_method
+      Pry.config.print = @old_print
+      @output_method = nil
+    end
+  end
+
+  Hirb.enable
+end
 
 # ==============================
 #   Awesome Print
 # ==============================
 # Pretty print your Ruby objects with style -- in full color and with proper indentation
 # http://github.com/michaeldv/awesome_print
-begin
-  require 'awesome_print'
+if defined? AwesomePrint
   # The following line enables awesome_print for all pry output,
   # and it also enables paging
   Pry.config.print = proc {|output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)}
 
   # If you want awesome_print without automatic pagination, use the line below
   # Pry.config.print = proc { |output, value| output.puts value.ai }
-  # if defined? Bundler
-  #   Gem.post_reset_hooks.reject! { |hook| hook.source_location.first =~ %r{/bundler/} }
-  #   Gem::Specification.reset
-  #   load 'rubygems/custom_require.rb'
-  # end
+  if defined? Bundler
+    Gem.post_reset_hooks.reject! { |hook| hook.source_location.first =~ %r{/bundler/} }
+    Gem::Specification.reset
+    load 'rubygems/custom_require.rb'
+  end
   #
   # ## awesome_print config for Minitest.
-  # if defined? Minitest
-  #   module Minitest::Assertions
-  #     def mu_pp(obj)
-  #       obj.awesome_inspect
-  #     end
-  #   end
-  # end
-rescue LoadError => err
-  puts "gem install awesome_print  # <-- highly recommended"
+  if defined? Minitest
+    module Minitest::Assertions
+      def mu_pp(obj)
+        obj.awesome_inspect
+      end
+    end
+  end
 end
 
 # ==============================
 #   CodeRay
 # ==============================
-begin
-  require 'code_ray'
+if defined? CodeRay
   CodeRay.scan("example", :ruby).term # just to load necessary files
   # Token colors pulled from: https://github.com/rubychan/coderay/blob/master/lib/coderay/encoders/terminal.rb
 
@@ -143,8 +139,6 @@ begin
       end
     end
   end
-rescue LoadError => err
-  puts "gem install code_ray"
 end
 
 # ==============================
