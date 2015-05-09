@@ -15,7 +15,7 @@
   # add
   a = add                           # add
   ap = add -p                       # add -p (interactive patching)
-  ap = add -i                       # add -p (interactive adding/staging)
+  ai = add -i                       # add -p (interactive adding/staging)
   chunkyadd = add --patch           # stage commits chunk by chunk
 
   # via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
