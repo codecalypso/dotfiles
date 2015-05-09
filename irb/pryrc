@@ -97,11 +97,11 @@ if defined? AwesomePrint
 
   # If you want awesome_print without automatic pagination, use the line below
   # Pry.config.print = proc { |output, value| output.puts value.ai }
-  if defined? Bundler
-    Gem.post_reset_hooks.reject! { |hook| hook.source_location.first =~ %r{/bundler/} }
-    Gem::Specification.reset
-    load 'rubygems/custom_require.rb'
-  end
+  # if defined? Bundler
+  #   Gem.post_reset_hooks.reject! { |hook| hook.source_location.first =~ %r{/bundler/} }
+  #   Gem::Specification.reset
+  #   load 'rubygems/custom_require.rb'
+  # end
   #
   # ## awesome_print config for Minitest.
   if defined? Minitest
