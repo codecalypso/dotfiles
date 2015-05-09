@@ -5,6 +5,10 @@ vim/backups
 # Ignore tmux plugins (this will be managed by tmux-plugin itself)
 tmux/plugins
 
+# Ignore tmux logs
+tmux-client-*
+tmux-server-*
+
 # Ignore my SSH keys ;)
 ssh/
 

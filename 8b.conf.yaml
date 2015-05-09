@@ -28,6 +28,9 @@
     ~/.tmux.conf:
         force: true
         path: tmux/tmux.conf
+    ~/.tmuxinator:
+        force: true
+        path: tmuxinator
     ~/.aprc:
         force: true
         path: irb/aprc
