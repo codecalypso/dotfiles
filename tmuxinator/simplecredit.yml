@@ -1,7 +1,7 @@
 # ~/.tmuxinator/simplecredit.yml
 
 name: simplecredit
-root: ~/8b/brands/simplecredit/simplecredit
+root: ~/simplecredit
 
 # Optional tmux socket
 # socket_name: foo
@@ -23,7 +23,13 @@ root: ~/8b/brands/simplecredit/simplecredit
 
 windows:
   - editor:
-      layout: main-vertical
+      layout: even-vertical
       panes:
         - vim
-  - logs: tail -f log/development.log
+  - git: git s
+  - tests: be rake
+  - logs:
+      layout: even-vertical
+      panes:
+        - tail -f log/development.log
+        - tail -f log/test.log

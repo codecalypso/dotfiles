@@ -1,6 +1,6 @@
-map <Leader>rt :call RunCurrentSpecFile()<CR>
-map <Leader>rs :call RunNearestSpec()<CR>
-map <Leader>rl :call RunLastSpec()<CR>
-map <Leader>ra :call RunAllSpecs()<CR>
+map <Leader>rsf :call RunCurrentSpecFile()<CR>
+map <Leader>rns :call RunNearestSpec()<CR>
+map <Leader>rls :call RunLastSpec()<CR>
+map <Leader>ras :call RunAllSpecs()<CR>
 
-let g:rspec_command = "!bundle exec rspec --drb {spec}"
+let g:rspec_command = "Dispatch bundle exec rspec {spec}"

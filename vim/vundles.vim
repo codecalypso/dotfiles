@@ -40,11 +40,13 @@ Bundle "mattn/gist-vim"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-git"
 
+" Productivity Enhancemnts
+Bundle "tpope/vim-dispatch"
+
 " General text editing improvements...
 Bundle "AndrewRadev/splitjoin.vim"
 Bundle "Raimondi/delimitMate"
 Bundle "Shougo/neocomplcache.git"
-Bundle "godlygeek/tabular"
 Bundle "Lokaltog/vim-easymotion"
 Bundle "tomtom/tcomment_vim.git"
 Bundle "tpope/vim-bundler"
@@ -59,7 +61,7 @@ Bundle "honza/vim-snippets"
 Bundle "jistr/vim-nerdtree-tabs.git"
 Bundle "scrooloose/nerdtree.git"
 Bundle "kien/ctrlp.vim"
-Bundle "tpope/vim-vinegar"
+Bundle "tpope/vim-vinegar" 
 
 "Search
 Bundle "rking/ag.vim"
