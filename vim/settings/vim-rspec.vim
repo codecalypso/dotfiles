@@ -1,4 +1,4 @@
-map <Leader>rsf :call RunCurrentSpecFile()<CR>
+map <Leader>rcf :call RunCurrentSpecFile()<CR>
 map <Leader>rns :call RunNearestSpec()<CR>
 map <Leader>rls :call RunLastSpec()<CR>
 map <Leader>ras :call RunAllSpecs()<CR>

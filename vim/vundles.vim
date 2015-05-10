@@ -10,8 +10,6 @@ Bundle "gmarik/vundle"
 Bundle "tpope/vim-rails.git"
 Bundle "tpope/vim-rake.git"
 Bundle "vim-ruby/vim-ruby.git"
-Bundle "Keithbsmiley/rspec.vim"
-Bundle "thoughtbot/vim-rspec"
 Bundle "skwp/vim-spec-finder"
 Bundle "ck3g/vim-change-hash-syntax"
 
@@ -42,6 +40,13 @@ Bundle "tpope/vim-git"
 
 " Productivity Enhancemnts
 Bundle "tpope/vim-dispatch"
+Bundle "benmills/vimux"
+
+" Testing powers
+Bundle "skalnik/vim-vroom"
+Bundle "Keithbsmiley/rspec.vim"
+Bundle "thoughtbot/vim-rspec"
+Bundle "jgdavey/vim-turbux"
 
 " General text editing improvements...
 Bundle "AndrewRadev/splitjoin.vim"
