@@ -1,7 +1,7 @@
 # ~/.tmuxinator/simplecredit.yml
 
-name: simplecredit
-root: ~/8b/brands/simplecredit/simplecredit
+name: simplecredit_portal
+root: ~/8b/brands/simplecredit/portal
 
 # Optional tmux socket
 # socket_name: foo
