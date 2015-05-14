@@ -1,7 +1,7 @@
-# ~/.tmuxinator/simplecredit_portal.yml
+# ~/.tmuxinator/simplecredit.yml
 
-name: simplecredit_portal
-root: ~/8b/brands/simplecredit/portal
+name: data_maker
+root: ~/gems/data_maker
 
 # Optional tmux socket
 # socket_name: foo
@@ -26,11 +26,5 @@ windows:
       layout: even-vertical
       panes:
         - vim
-  - console: rails c
+  - console: pry
   - git: git s
-  - tests:
-  - logs:
-      layout: even-vertical
-      panes:
-        - tail -f log/development.log
-        - tail -f log/test.log
