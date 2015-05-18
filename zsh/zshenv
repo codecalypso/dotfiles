@@ -22,6 +22,7 @@ if echo hello | grep --color=auto l >/dev/null 2>&1; then
 fi
 
 # ---------------------------------------
-# RBenv
+# Chruby
 # ---------------------------------------
-  eval "$(rbenv init -)"
+ source /usr/local/share/chruby/chruby.sh
+ source /usr/local/share/chruby/auto.sh
